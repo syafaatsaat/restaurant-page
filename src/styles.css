@@ -1,20 +1,27 @@
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 h1 {
     font-family: "Modak", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 80px;
-    text-align: center;
+    font-size: 96px;
 }
 
 h2 {
     font-size: 32px;
 }
 
-h2,
-p {
-    font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+#content {
+    width: min(768px, 80%);
+    margin: 0 auto;
     text-align: center;
+}
+
+#description {
+    font-size: 18px;
 }
