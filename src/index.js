@@ -1,6 +1,7 @@
 import "./styles.css";
 import {
-    generateHomeContent
+    generateHomeContent,
+    generateMenuContent
 } from "./menu.js";
 
 const contentDiv = document.getElementById("content");
@@ -24,6 +25,7 @@ buttons.addEventListener('click', (event) => {
             break;
         case "menu":
             clearContent();
+            generateMenuContent();
             break;
         case "about":
             clearContent();
@@ -31,4 +33,4 @@ buttons.addEventListener('click', (event) => {
     }
 });
 
-//generateHomeContent();
+generateHomeContent();

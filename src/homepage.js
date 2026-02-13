@@ -19,9 +19,9 @@ function addTextWithBreaks(element, text, doubleBreaks = true) {
     element.appendChild(document.createTextNode(tempStr));
 }
 
-function generateHomeContent() {
-    const contentDiv = document.getElementById("content");
+const contentDiv = document.getElementById("content");
 
+function generateHomeContent() {
     const logoH1 = document.createElement("h1");
     logoH1.setAttribute("id", "logo");
     logoH1.textContent = "SHEF";
@@ -59,4 +59,8 @@ function generateHomeContent() {
     contentDiv.append(descriptionDiv);
 }
 
-export { addTextWithBreaks, generateHomeContent };
+export {
+    contentDiv,
+    addTextWithBreaks, 
+    generateHomeContent 
+};
