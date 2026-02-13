@@ -28,6 +28,7 @@ function generateHomeContent() {
     contentDiv.append(logoH1);
 
     const headlineH2 = document.createElement("h2");
+    headlineH2.setAttribute("id", "headline");
     const headlineText = `
         A Taste of the West, A Slice of Bliss, ^Prepared by your Favourite 
     `;
