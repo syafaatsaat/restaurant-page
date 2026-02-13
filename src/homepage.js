@@ -23,6 +23,7 @@ function generateHomeContent() {
     const contentDiv = document.getElementById("content");
 
     const logoH1 = document.createElement("h1");
+    logoH1.setAttribute("id", "logo");
     logoH1.textContent = "SHEF";
     contentDiv.append(logoH1);
 
@@ -58,4 +59,4 @@ function generateHomeContent() {
     contentDiv.append(descriptionDiv);
 }
 
-export { generateHomeContent };
+export { addTextWithBreaks, generateHomeContent };

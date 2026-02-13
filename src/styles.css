@@ -3,25 +3,47 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: 18px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: 18px;
 }
 
 h1 {
-    font-family: "Modak", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 96px;
+    font-size: 48px;
 }
 
 h2 {
     font-size: 32px;
 }
 
+#logo {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 96px;
+}
+
 #content {
     width: min(768px, 80%);
-    margin: 0 auto;
+    margin: 10px auto;
     text-align: center;
 }
 
-#description {
-    font-size: 18px;
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

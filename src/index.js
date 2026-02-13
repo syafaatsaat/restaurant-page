@@ -1,5 +1,7 @@
 import "./styles.css";
-import { generateHomeContent } from "./homepage.js";
+import {
+    generateHomeContent
+} from "./menu.js";
 
 const contentDiv = document.getElementById("content");
 
@@ -11,7 +13,7 @@ function clearContent() {
     }
 }
 
-const buttons = document.querySelector("button");
+const buttons = document.querySelector("#nav");
 buttons.addEventListener('click', (event) => {
     let target = event.target;
 
@@ -21,10 +23,12 @@ buttons.addEventListener('click', (event) => {
             generateHomeContent();
             break;
         case "menu":
+            clearContent();
             break;
         case "about":
+            clearContent();
             break;
     }
 });
 
-generateHomeContent();
+//generateHomeContent();
