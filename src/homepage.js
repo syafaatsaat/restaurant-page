@@ -1,27 +1,27 @@
 import { 
     contentDiv, 
-    addTextWithBreaks 
+    addTextWithBreaks, 
+    createAndAppendElement
 } from "./functions.js";
 
 function generateHomeContent() {
-    const logoH1 = document.createElement("h1");
-    logoH1.setAttribute("id", "logo");
-    logoH1.textContent = "SHEF";
-    contentDiv.append(logoH1);
+    const logoH1 = createAndAppendElement(
+        "h1", "SHEF", contentDiv, "logo"
+    );
 
-    const headlineH2 = document.createElement("h2");
-    headlineH2.setAttribute("id", "headline");
     const headlineText = `
         A Taste of the West, A Slice of Bliss, ^Prepared by your Favourite 
     `;
-    addTextWithBreaks(headlineH2, headlineText, false);
-    const strongShef = document.createElement("strong");
-    strongShef.textContent = "SHEF";
-    headlineH2.append(strongShef);
-    contentDiv.append(headlineH2);
+    const headlineH2 = createAndAppendElement(
+        "h2", headlineText, contentDiv, "headline", null, true
+    );
+    createAndAppendElement(
+        "strong", "SHEF", headlineH2
+    );
 
-    const descriptionDiv = document.createElement("div");
-    descriptionDiv.setAttribute("id", "description");
+    const descriptionDiv = createAndAppendElement(
+        "div", null, contentDiv, "description"
+    );
     const descriptionText = `
         Step into a warm and inviting space where the comforting flavours of 
         Western cuisine meet the art of exquisite desserts. Our restaurant is 
@@ -38,8 +38,9 @@ function generateHomeContent() {
         Here, every visit is a celebration of flavour, quality, and sweet 
         satisfaction.
     `;
-    addTextWithBreaks(descriptionDiv, descriptionText);
-    contentDiv.append(descriptionDiv);
+    createAndAppendElement(
+        "p", descriptionText, descriptionDiv, null, null, true
+    );
 }
 
 export {

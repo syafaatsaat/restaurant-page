@@ -1,6 +1,6 @@
 function addTextWithBreaks(element, text, doubleBreaks = true) {
     let tempStr = "";
-    text = text.trim();
+    //text = text.trim();
     let k = 0;
 
     for (let i = 0; i < text.length; ++i) {
