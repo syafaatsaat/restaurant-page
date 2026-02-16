@@ -1,8 +1,7 @@
 import { 
     contentDiv, 
-    addTextWithBreaks, 
-    generateHomeContent 
-} from "./homepage.js";
+    addTextWithBreaks
+} from "./functions.js";
 
 function addMenu(section, name, price) {
     const rowDiv = document.createElement("div");
@@ -53,15 +52,12 @@ function generateMenuContent() {
     beveragesH2.textContent = "Beverages";
     beveragesSection.append(beveragesH2);
     addMenu(beveragesSection, "Iced Lemon Tea", "3.50");
-    addMenu(beveragesSection, "Matcha Strawberry Latte", "5.50");
+    addMenu(beveragesSection, "Strawberry Matcha Latte", "5.50");
     menuDiv.append(beveragesSection);
 
     contentDiv.append(menuDiv);
 }
 
 export {
-    contentDiv,
-    addTextWithBreaks, 
-    generateHomeContent,
     generateMenuContent
 };

@@ -1,25 +1,7 @@
-function addTextWithBreaks(element, text, doubleBreaks = true) {
-    let tempStr = "";
-    let k = 0;
-
-    for (let i = 0; i < text.length; ++i) {
-        if (text[i] === '^') {
-            tempStr = text.substring(k, i);
-            element.appendChild(document.createTextNode(tempStr));
-            element.appendChild(document.createElement('br'));
-            if (doubleBreaks)
-                element.appendChild(document.createElement('br'));
-
-            tempStr = "";
-            k = i + 1;
-        }
-    }
-
-    tempStr = text.substring(k);
-    element.appendChild(document.createTextNode(tempStr));
-}
-
-const contentDiv = document.getElementById("content");
+import { 
+    contentDiv, 
+    addTextWithBreaks 
+} from "./functions.js";
 
 function generateHomeContent() {
     const logoH1 = document.createElement("h1");
@@ -61,7 +43,5 @@ function generateHomeContent() {
 }
 
 export {
-    contentDiv,
-    addTextWithBreaks, 
     generateHomeContent 
 };

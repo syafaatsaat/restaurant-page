@@ -1,8 +1,7 @@
 import "./styles.css";
-import {
-    generateHomeContent,
-    generateMenuContent
-} from "./menu.js";
+import { generateHomeContent } from "./homepage.js";
+import { generateMenuContent } from "./menu.js";
+import { generateAboutContent } from "./about.js";
 
 const contentDiv = document.getElementById("content");
 
@@ -29,6 +28,7 @@ buttons.addEventListener('click', (event) => {
             break;
         case "about":
             clearContent();
+            generateAboutContent();
             break;
     }
 });
