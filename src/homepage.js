@@ -1,13 +1,18 @@
 import { 
     contentDiv, 
+    headerDiv,
+    changeHeader,
+    changeBackgroundImage,
     addTextWithBreaks, 
     createAndAppendElement
 } from "./functions.js";
 
 function generateHomeContent() {
-    const logoH1 = createAndAppendElement(
-        "h1", "SHEF", contentDiv, "logo"
+    changeHeader();
+    createAndAppendElement(
+        "h1", "SHEF", headerDiv, "logo"
     );
+    changeBackgroundImage('HOME');
 
     const headlineText = `
         A Taste of the West, A Slice of Bliss, ^Prepared by your Favourite 

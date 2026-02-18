@@ -49,10 +49,38 @@ function createAndAppendElement(tag, text=null, parent=null, id=null,
     return element;
 }
 
+const headerDiv = document.getElementById("header");
+const headerElement = document.getElementById("main-header");
 const contentDiv = document.getElementById("content");
+
+function changeHeader() {
+    let child = headerDiv.lastElementChild;
+    if (child) {
+        headerDiv.removeChild(child);
+    }
+}
+
+function changeBackgroundImage(page) {
+    headerElement.className = "";
+
+    switch (page) {
+        case 'HOME':
+            headerElement.classList.add("home");
+            break;
+        case 'MENU':
+            headerElement.classList.add("menu");
+            break;
+        case 'ABOUT':
+            headerElement.classList.add("about");
+            break;
+    }
+}
 
 export { 
     contentDiv,
+    headerDiv,
+    changeHeader,
+    changeBackgroundImage,
     addTextWithBreaks,
     createAndAppendElement
 };

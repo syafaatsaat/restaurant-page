@@ -1,6 +1,9 @@
 import { 
     contentDiv,
-    createAndAppendElement
+    headerDiv,
+    changeHeader,
+    createAndAppendElement,
+    changeBackgroundImage
 } from "./functions.js";
 
 function addMenu(section, name, price) {
@@ -18,9 +21,11 @@ function addMenu(section, name, price) {
 }
 
 function generateMenuContent() {
+    changeHeader();
     createAndAppendElement(
-        "h1", "MENU", contentDiv
+        "h1", "MENU", headerDiv
     );
+    changeBackgroundImage('MENU');
 
     const menuDiv = createAndAppendElement(
         "div", null, contentDiv, "menu"

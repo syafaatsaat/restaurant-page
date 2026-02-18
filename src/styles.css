@@ -1,3 +1,9 @@
+:root {
+    --logo-color: rgb(91, 169, 112);
+    --footer-bg-color: rgb(64, 122, 79);
+    --header-1-color: rgb(42, 42, 42);
+}
+
 body {
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
@@ -14,17 +20,40 @@ body {
     justify-content: space-between;
 }
 
+a {
+    color: white;
+}
+
 button {
     font-family: inherit;
     font-size: 24px;
     padding: 10px 0;
-    width: 200px;
+    width: 100px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header {
+    background-size: cover;
+    background-position: center;
 }
 
 h1:not(#logo) {
     font-size: 60px;
     font-weight: bold;
     padding: 30px 0;
+    color: var(--header-1-color);
+}
+
+#header > h1 {
+    color: var(--logo-color);
+}
+
+h2,
+h4 {
+    color: var(--header-1-color);
 }
 
 h2 {
@@ -33,18 +62,34 @@ h2 {
 
 footer {
     width: 100%;
-    background-color: lightgray;
+    background-color: var(--footer-bg-color);
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
+    color: white;
 }
 
 #nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 100px;
     margin-top: 40px;
+}
+
+#nav > button {
+    background-color: transparent;
+    border: 5px solid transparent;
+    font-weight: bold;
+    color: white;
+}
+
+#nav > button:hover {
+    border-bottom: 5px solid var(--logo-color);
+}
+
+#header {
+    text-align: center;
 }
 
 #logo {
@@ -52,13 +97,14 @@ footer {
     font-weight: 400;
     font-style: normal;
     font-size: 96px;
+    color: var(--logo-color);
 }
 
 #content {
     width: min(768px, 80%);
-    margin: 10px auto;
+    margin: 50px auto;
     text-align: center;
-    margin-bottom: 50px;
+    background-color: white;
 }
 
 #headline {
@@ -76,6 +122,14 @@ footer {
     gap: 40px;
 }
 
+#reserve {
+    width: 300px;
+}
+
+#address > .row:not(.row:first-of-type) {
+    margin-top: 40px;
+}
+
 .section {
     display: flex;
     flex-direction: column;
@@ -84,4 +138,18 @@ footer {
 
 .dish-name {
     font-weight: bold;
+}
+
+.home {
+    background-image: url("../assets/home-bg.jpg");
+    background-position: top;
+}
+
+.menu {
+    background-image: url("../assets/menu-bg.jpg");
+}
+
+.about {
+    background-image: url("../assets/about-bg.jpg");
+    background-position: center;
 }
