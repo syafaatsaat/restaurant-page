@@ -3,6 +3,10 @@ import { generateHomeContent } from "./homepage.js";
 import { generateMenuContent } from "./menu.js";
 import { generateAboutContent } from "./about.js";
 
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
+
 const contentDiv = document.getElementById("content");
 
 function clearContent() {
